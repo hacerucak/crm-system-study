@@ -69,5 +69,35 @@ color:gray;
 
 </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<canvas id="salesChart" style="margin-top:50px;"></canvas>
+
+<script>
+
+const ctx = document.getElementById('salesChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Lead', 'Qualified', 'Proposal', 'Won'],
+        datasets: [{
+            label: 'Sales Pipeline',
+            data: [12, 8, 5, 3],
+            backgroundColor: [
+                '#3498db',
+                '#f1c40f',
+                '#9b59b6',
+                '#2ecc71'
+            ]
+        }]
+    },
+    options: {
+        responsive: true
+    }
+});
+
+</script>
+
 </body>
 </html>
